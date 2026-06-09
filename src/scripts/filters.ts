@@ -1,4 +1,4 @@
-import { allCards } from './data.ts'
+import { allCards, type Card } from './data.ts'
 
 interface Category {
   id: string;
@@ -41,11 +41,23 @@ export function renderFilters(container: HTMLElement | null): void {
 
   container.innerHTML = categories.map((cat: Category) => `
     <li class="filters__item">
-      <button class="filters__button ${cat.id === 'all' ? 'filters__button--active' : ''} button"
+      <button class="filters__button ${cat.id === 'all' ? 'filters__button--active' : ''} tab"
               data-category="${cat.id}">
         ${cat.name}
-        <span class="filters__count">${cat.count}</span>
+        <sup class="filters__count">${cat.count}</span>
       </button>
     </li>
   `).join('')
+}
+
+export function filterCards(
+  cards: Card[],
+  category: string,
+  searchText: string
+): Card[] {
+  return cards.filter((card) => {
+    const categoryMatch = category === 'all' || card.category === category;
+    const searchMatch = card.title.toLowerCase().includes(searchText.toLowerCase());
+    return categoryMatch && searchMatch;
+  });
 }
