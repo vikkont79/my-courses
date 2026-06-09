@@ -18,7 +18,10 @@ export function renderCards(container: HTMLElement | null, cards: Card[]): void 
     }
 
     const badge = clone.querySelector('.card__badge') as HTMLElement | null
-    if (badge) badge.textContent = card.badge
+    if (badge) {
+      badge.textContent = card.badge
+      badge.setAttribute('data-category', card.category)
+    }
 
     const title = clone.querySelector('.card__title') as HTMLElement | null
     if (title) title.textContent = card.title

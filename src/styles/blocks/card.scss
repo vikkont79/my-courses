@@ -1,0 +1,67 @@
+.card {
+  outline: 1px var(--color-gray-300) solid;
+  border-radius: var(--radius-sm);
+  box-shadow:
+    0px 4px 4px -4px #1e212c08,
+    0px 12px 10px -6px #9a9ca50a,
+    0px 30px 24px -10px #9a9ca50d,
+    0px 80px 80px -20px #9a9ca514;
+}
+
+.card__image {
+  display: block;
+  inline-size: 390px;
+  overflow: auto;
+}
+
+.card__content {
+  padding: var(--indent-6);
+  text-align: start;
+}
+
+.card__badge {
+  display: inline-block;
+  padding-inline: var(--indent-2);
+  border-radius: var(--radius-sm);
+  color: var(--color-white);
+  font-size: var(--font-size-sm);
+
+  &[data-category="marketing"] {
+    background-color: var(--color-success);
+  }
+
+  &[data-category="management"] {
+    background-color: var(--color-info);
+  }
+
+  &[data-category="hr & recruting"] {
+    background-color: var(--color-warning);
+  }
+
+  &[data-category="design"] {
+    background-color: var(--color-purple);
+  }
+
+  &[data-category="development"] {
+    background-color: var(--color-light-blue);
+  }
+}
+
+.card__title {
+  margin-block: var(--indent-5);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+}
+
+.card__info {
+  font-size: var(--font-size-md);
+}
+
+.card__price {
+  color: var(--color-danger);
+  font-weight: 700;
+}
+
+.card__author {
+  color: var(--color-gray-700);
+}
