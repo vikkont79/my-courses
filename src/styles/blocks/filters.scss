@@ -1,0 +1,30 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: var(--indent-3);
+  padding-inline: 0;
+  list-style-type: none;
+}
+
+.filters__count {
+  margin-inline-start: var(--base-indent);
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+.filters__button {
+  color: var(--color-grey-600);
+
+  &:hover {
+    color: var(--color-grey-800);
+  }
+}
+
+.filters__button--active {
+  outline: 1px var(--color-primary) solid;
+  color: var(--color-primary)
+}
+
+

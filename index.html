@@ -10,18 +10,22 @@
 
 <body>
   <div id="app">
-    <p class="slogan">Enjoy your studying!</p>
-    <h1 class="title">Our online courses</h1>
-    <header class="header">
-      <nav class="header__nav nav">
-        <ul class="nav__list filters"></ul>
-        <input class="nav__seach">
-      </nav>
-    </header>
-    <div class="catalog">
-      <ul class="catalog__list"></ul>
-      <button class="catalog__button button">Load more</button>
-    </div>
+    <h1 class="visually-hidden">Основной заголовок страницы</h1>
+    <section class="courses wrapper">
+      <p class="courses__slogan">Enjoy your studying!</p>
+      <h2 class="courses__title">Our online courses</h2>
+      <div class="toolbar" role="toolbar" aria-label="Фильтры и поиск курсов">
+        <ul class="toolbar__list filters" role="list" aria-label="Фильтры курсов по категориям"></ul>
+        <div class="toolbar__input search">
+          <input class="search__input" type="search" name="search-input" placeholder="Search courses..." aria-label="Поиск курсов">
+          <span class="search__icon"></span>
+        </div>
+      </div>
+      <div class="catalog">
+        <ul class="catalog__list" role="list" aria-label="Список курсов"></ul>
+        <button class="catalog__button button">Load more</button>
+      </div>
+    </section>
     <template id="card-template">
       <li class="catalog__item card">
         <img class="card__image">

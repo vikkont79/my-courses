@@ -1,3 +1,11 @@
-@import './styles/common/variables.scss';
-@import './styles/common/fonts.scss';
-@import './styles/common/global.scss';
+/* GLOBAL */
+@use './styles/common/variables';
+@use './styles/common/fonts';
+@use './styles/common/global';
+
+/* BLOCKS */
+@use './styles/blocks/courses';
+@use './styles/blocks/toolbar';
+@use './styles/blocks/filters';
+@use './styles/blocks/tab.scss';
+@use './styles/blocks/search';
