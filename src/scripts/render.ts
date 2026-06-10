@@ -8,8 +8,13 @@ export function renderCards(container: HTMLElement | null, cards: Card[]): void 
 
   const fragment = document.createDocumentFragment()
 
-  cards.forEach(card => {
+  cards.forEach((card, index) => {
     const clone = template.content.cloneNode(true) as DocumentFragment
+
+    const cardElement = clone.querySelector('.card') as HTMLElement;
+    if (cardElement) {
+      cardElement.style.animationDelay = `${index * 0.03}s`;
+    }
 
     const image = clone.querySelector('.card__image') as HTMLImageElement | null
     if (image) {

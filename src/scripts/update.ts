@@ -1,10 +1,12 @@
 import { allCards } from './data';
 import { filterCards, updateFiltersCounters } from './filters';
 import { renderCards } from './render';
-import { visibleCardsCount, updateLoadMoreButton } from './upload';
+import { updateLoadMoreButton } from './upload';
 
 let currentCategory: string = 'all'
 let currentSearch: string = ''
+let visibleCardsCount = 9
+const cardsPerLoad = 3
 
 export function setCurrentCategory(category: string) {
   currentCategory = category
@@ -12,6 +14,14 @@ export function setCurrentCategory(category: string) {
 
 export function setCurrentSearch(search: string) {
   currentSearch = search
+}
+
+export function loadMoreCards() {
+  visibleCardsCount += cardsPerLoad;
+}
+
+export function resetPagination() {
+  visibleCardsCount = 9;
 }
 
 export function update() {
@@ -22,7 +32,7 @@ export function update() {
   const visibleCards = filtered.slice(0, visibleCardsCount)
 
   renderCards(cardsContainer, visibleCards)
-  updateLoadMoreButton(filtered.length)
+  updateLoadMoreButton(filtered.length, visibleCardsCount)
   updateFiltersCounters(filtered)
 
   document.querySelectorAll('.filters__button').forEach(btn => {

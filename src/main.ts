@@ -1,7 +1,7 @@
 import './style.scss'
 import { renderFilters } from './scripts/filters.ts'
-import { update, setCurrentCategory, setCurrentSearch } from './scripts/update'
-import { resetPagination } from './scripts/upload'
+import { update, setCurrentCategory, setCurrentSearch, loadMoreCards, resetPagination } from './scripts/update'
+
 
 
 
@@ -33,7 +33,7 @@ if (filtersContainer) {
 const loadMoreBtn = document.querySelector<HTMLElement>('.catalog__button')
 if (loadMoreBtn) {
   loadMoreBtn.addEventListener('click', () => {
-    resetPagination()
+    loadMoreCards()
     update()
   })
 }

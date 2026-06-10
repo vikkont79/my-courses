@@ -1,21 +1,11 @@
-export let visibleCardsCount = 9;
-const cardsPerLoad = 3;
-
-export function updateLoadMoreButton(filteredTotal: number) {
+export function updateLoadMoreButton(filteredTotal: number, visibleCount: number) {
   const loadMoreBtn = document.querySelector<HTMLElement>('.catalog__button');
   if (!loadMoreBtn) return;
 
-  if (visibleCardsCount >= filteredTotal) {
+  if (visibleCount >= filteredTotal) {
     loadMoreBtn.style.display = 'none';
   } else {
     loadMoreBtn.style.display = 'flex';
   }
 }
 
-export function loadMoreCards() {
-  visibleCardsCount += cardsPerLoad;
-}
-
-export function resetPagination() {
-  visibleCardsCount = 9;
-}
