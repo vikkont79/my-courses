@@ -8,7 +8,7 @@ export function updateLoadMoreButton(filteredTotal: number) {
   if (visibleCardsCount >= filteredTotal) {
     loadMoreBtn.style.display = 'none';
   } else {
-    loadMoreBtn.style.display = 'block';
+    loadMoreBtn.style.display = 'flex';
   }
 }
 

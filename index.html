@@ -23,7 +23,10 @@
       </div>
       <div class="catalog">
         <ul class="catalog__list" role="list" aria-label="Список курсов"></ul>
-        <button class="catalog__button button">Load more</button>
+        <button class="catalog__button btn">
+          <span class="catalog__icon"></span>
+          <span>Load more</span>
+        </button>
       </div>
     </section>
     <template id="card-template">
@@ -34,6 +37,7 @@
           <p class="card__title"></p>
           <div class="card__info">
             <span class="card__price"></span>
+            <span class="card__divider"></span>
             <span class="card__author"></span>
           </div>
         </div>

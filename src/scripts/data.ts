@@ -48,7 +48,7 @@ export const allCards: Card[] = [
   },
   {
     id: 4,
-    title: "TBrand Management & PR Communications",
+    title: "Brand Management & PR Communications",
     category: "marketing",
     badge: "Marketing",
     price: 530,

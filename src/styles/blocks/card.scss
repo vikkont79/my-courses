@@ -82,3 +82,11 @@
 .card__author {
   color: var(--color-gray-700);
 }
+
+.card__divider {
+  display: inline-block;
+  margin-inline: var(--base-indent);
+  inline-size: 2px;
+  block-size: 16px;
+  background-color: var(--color-gray-700);
+}
