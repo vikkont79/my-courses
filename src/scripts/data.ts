@@ -112,4 +112,92 @@ export const allCards: Card[] = [
       avatar: "images/cody-fisher.png",
     },
   },
+  {
+    id: 10,
+    title: "Google Ads Retargeting Mastery",
+    category: "marketing",
+    badge: "Marketing",
+    price: 180,
+    author: {
+      name: "Jeromee Bell",
+      avatar: "images/jerome-bell.png",
+    },
+  },
+  {
+    id: 11,
+    title: "Agile Product Management",
+    category: "management",
+    badge: "Management",
+    price: 350,
+    author: {
+      name: "Marvin McKinney",
+      avatar: "images/marvin-mckinney.png",
+    },
+  },
+  {
+    id: 12,
+    title: "Recruiting Operations",
+    category: "hr & recruting",
+    badge: "HR & Recruting",
+    price: 300,
+    author: {
+      name: "Leslie Alexander Li",
+      avatar: "images/leslie-alexander-li.png",
+    },
+  },
+  {
+    id: 13,
+    title: "Microservices Architecture",
+    category: "development",
+    badge: "Development",
+    price: 720,
+    author: {
+      name: "Brooklyn Simmons",
+      avatar: "images/brooklyn-simmons.png",
+    },
+  },
+  {
+    id: 14,
+    title: "Brand Strategy & PR Crash Course",
+    category: "marketing",
+    badge: "Marketing",
+    price: 250,
+    author: {
+      name: "Kristin Watson",
+      avatar: "images/kristin-watson.png",
+    },
+  },
+  {
+    id: 15,
+    title: "HR Analytics & Reporting",
+    category: "hr & recruting",
+    badge: "HR & Recruting",
+    price: 280,
+    author: {
+      name: "Kathryn Murphy",
+      avatar: "images/kathrin-murphy.png",
+    },
+  },
+  {
+    id: 16,
+    title: "Rust for High‑load Systems",
+    category: "development",
+    badge: "Development",
+    price: 680,
+    author: {
+      name: "Brooklyn Simmons",
+      avatar: "images/brooklyn-simmons.png",
+    },
+  },
+  {
+    id: 17,
+    title: "Talent Sourcing Strategies",
+    category: "hr & recruting",
+    badge: "HR & Recruting",
+    price: 220,
+    author: {
+      name: "Leslie Alexander Li",
+      avatar: "images/leslie-alexander-li.png",
+    },
+  },
 ]
