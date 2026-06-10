@@ -12,7 +12,7 @@ export function renderCards(container: HTMLElement | null, cards: Card[]): void 
     const clone = template.content.cloneNode(true) as DocumentFragment
 
     const cardElement = clone.querySelector('.card') as HTMLElement;
-    if (cardElement) {
+    if (window.innerWidth > 768 && cardElement) {
       cardElement.style.animationDelay = `${index * 0.03}s`;
     }
 
