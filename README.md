@@ -24,7 +24,7 @@
 ## 🚀 Деплой
 
 Проект задеплоен на **Vercel**:
-🔗 [https://my-courses.vercel.app](https://my-courses.vercel.app)
+🔗 [https://my-courses-rho.vercel.app/](https://my-courses-rho.vercel.app/)
 
 ## 📂 Структура проекта
 
