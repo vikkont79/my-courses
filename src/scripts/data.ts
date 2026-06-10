@@ -20,7 +20,7 @@ export const allCards: Card[] = [
     badge: "Marketing",
     price: 100,
     author: {
-      name: "jeromee Bell",
+      name: "Jeromee Bell",
       avatar: "images/jerome-bell.png",
     },
   },

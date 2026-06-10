@@ -1,8 +1,13 @@
 .catalog__list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 390px));
+  justify-content: center;
   gap: 30px;
   margin-block: 0 80px;
   padding-inline-start: 0;
   list-style-type: none;
+
+  @media(max-width: 769px) {
+    grid-template-columns: minmax(280px, 600px);
+  }
 }

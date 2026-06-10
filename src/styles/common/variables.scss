@@ -25,6 +25,11 @@
 --font-size-md: 1.13rem; /* 18px */
 --font-size-lg: 1.25rem;  /* 20px */
 
+--font-size-sm: clamp(0.75rem, 1vw, 0.88rem);   /* 12px → 14px */
+--font-size-base: clamp(0.88rem, 1.5vw, 1rem);  /* 14px → 16px */
+--font-size-md: clamp(1rem, 2vw, 1.13rem);      /* 16px → 18px */
+--font-size-lg: clamp(1.13rem, 2.5vw, 1.25rem); /* 18px → 20px */
+
 /* ----- ОТСТУПЫ (4px сетка) ----- */
 --base-indent: 0.25rem;
 

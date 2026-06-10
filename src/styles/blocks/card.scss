@@ -6,12 +6,29 @@
     0px 12px 10px -6px #9a9ca50a,
     0px 30px 24px -10px #9a9ca50d,
     0px 80px 80px -20px #9a9ca514;
+
+  @media(max-width: 769px) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media(max-width: 426px) {
+    flex-direction: column;
+  }
 }
 
 .card__image {
   display: block;
   inline-size: 390px;
-  overflow: auto;
+
+  @media(max-width: 769px) {
+    inline-size: 214px;
+    flex-shrink: 0;
+  }
+
+  @media(max-width: 426px) {
+    inline-size: 100%;
+  }
 }
 
 .card__content {
