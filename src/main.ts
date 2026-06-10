@@ -1,38 +1,16 @@
 import './style.scss'
-import { allCards } from './scripts/data.ts'
-import { renderCards } from './scripts/render.ts'
-import { renderFilters, filterCards } from './scripts/filters.ts'
-import { visibleCardsCount, updateLoadMoreButton, loadMoreCards, resetPagination } from './scripts/upload'
+import { renderFilters } from './scripts/filters.ts'
+import { update, setCurrentCategory, setCurrentSearch } from './scripts/update'
+import { resetPagination } from './scripts/upload'
 
-let currentCategory = 'all'
-let currentSearch = ''
+
 
 const filtersContainer = document.querySelector<HTMLElement>('.filters')
-const cardsContainer = document.querySelector<HTMLElement>('.catalog__list')
 const searchInput = document.querySelector<HTMLInputElement>('.search__input')
-
-
-
-function update() {
-  if (!cardsContainer) return
-
-  const filtered = filterCards(allCards, currentCategory, currentSearch)
-  const visibleCards = filtered.slice(0, visibleCardsCount)
-  renderCards(cardsContainer, visibleCards)
-
-  updateLoadMoreButton(filtered.length)
-
-  document.querySelectorAll('.filters__button').forEach(btn => {
-    btn.classList.remove('filters__button--active')
-  })
-
-  const activeBtn = document.querySelector(`.filters__button[data-category="${currentCategory}"]`)
-  activeBtn?.classList.add('filters__button--active')
-}
 
 if (searchInput) {
   searchInput.addEventListener('input', (e) => {
-    currentSearch = (e.target as HTMLInputElement).value
+    setCurrentSearch((e.target as HTMLInputElement).value)
     resetPagination()
     update()
   })
@@ -43,19 +21,19 @@ if (filtersContainer) {
     const button = (e.target as HTMLElement).closest('.filters__button')
     if (!button) return
 
-    const category = button.getAttribute('data-category')
-    if (!category) return;
+    const category = button.getAttribute('data-category');
+    if (!category) return
 
-    currentCategory = category
+    setCurrentCategory(category)
     resetPagination()
     update()
   })
 }
 
-const loadMoreBtn = document.querySelector<HTMLElement>('.catalog__button');
+const loadMoreBtn = document.querySelector<HTMLElement>('.catalog__button')
 if (loadMoreBtn) {
   loadMoreBtn.addEventListener('click', () => {
-    loadMoreCards()
+    resetPagination()
     update()
   })
 }

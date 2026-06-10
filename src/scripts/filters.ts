@@ -61,3 +61,24 @@ export function filterCards(
     return categoryMatch && searchMatch;
   });
 }
+
+export function updateFiltersCounters(filteredCards: Card[]) {
+  const counts = new Map<string, number>()
+  counts.set('all', filteredCards.length)
+
+  filteredCards.forEach(card => {
+    const count = counts.get(card.category) ?? 0
+    counts.set(card.category, count + 1)
+  })
+
+  document.querySelectorAll('.filters__button').forEach(btn => {
+    const category = btn.getAttribute('data-category')
+    if (!category) return
+
+    const count = counts.get(category) ?? 0
+    const countSpan = btn.querySelector('.filters__count')
+    if (countSpan) {
+      countSpan.textContent = String(count)
+    }
+  })
+}
